@@ -69,7 +69,7 @@ The type of Arduino is not important, it only affects how many outputs are usabl
     <li><b>Quantization error</b> cannot be removed, it is an error caused by the resolution of the converter
         (=rounding)
     </li>
-    <li><b>Zero Offset or Drift</b> is a state when we there is a non-zero output with a grounded input (or when there's
+    <li><b>Zero Offset or Drift</b> is a state when the output is a non-zero with a grounded input (or when there's
         a zero output with a non-zero input)
     </li>
     <li><b>Non-linearity error</b> means the shape of the average characteristic of a real DAC is not a straight line
