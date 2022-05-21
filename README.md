@@ -52,7 +52,7 @@ The type of Arduino is not important, it only affects how many outputs are usabl
     </tbody>
 </table>
 <br>
-<h2>Parameters that we recognize in DACs</h2>
+<h2>Recognized parametrs of DACs</h2>
 <ul>
     <li><b>Accuracy of the conversion</b> depends on the stability of the reference voltage, on the accuracy of the
         components (resistors and switches) and is also determined by the size (number of bits) of the converted word -
