@@ -76,7 +76,7 @@ The type of Arduino is not important, it only affects how many outputs are usabl
     </li>
     <li><b>Quality</b> of reference voltage source U<sub>ref</sub> and quality of used resistors</li>
 </ul>
-<h2>R2R DAC &mdash; parallel Digital to Analog Converter</h2>
+<h1>R2R DAC &mdash; parallel Digital to Analog Converter</h1>
 <p>Basically, it is a summing amplifier (input resistors that are in parallel go to the inverting input of an
     operational amplifier that
     has negative feedback). Using the input controlled switches, we apply a constant reference voltage to the input
