@@ -61,7 +61,7 @@ The type of Arduino is not important, it only affects how many outputs are usabl
     </li>
     <li><b>Conversion rate</b> defines the number of input words converted to analog value per unit time</li>
     <li><b>Resolution</b> tells how many values the output signal can be (if we have a 3-bit converter, then there can
-        be 2<sup>3</sup> different values at the output = this corresponds to the resolution <sup>100</sup> &frasl;<sub>8</sub>
+        be 2<sup>3</sup> different values at the output = this corresponds to the resolution <sup>100</sup>&frasl;<sub>8</sub>
         = 12.5 %
     </li>
 </ul>
@@ -88,7 +88,70 @@ The type of Arduino is not important, it only affects how many outputs are usabl
     to introduce error into the conversion (when not switched they have infinite resistance and when switched they have
     very low resistance, ideally zero). Parallel DACs are quite expensive (because of the quality and values of the
     resistors, or the number of them), but they are fast and accurate.</p>
-<br>
+<table>
+    <thead>
+    <tr>
+        <th colspan="3" style="text-align: center">BIN IN</th>
+        <th style="text-align: center">Analog OUT</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="text-align: center">b<sub>2</sub></td>
+        <td style="text-align: center">b<sub>1</sub></td>
+        <td style="text-align: center">b<sub>0</sub></td>
+        <td style="text-align: center">U<sub>0</sub>/V</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">0</td>
+        <td style="text-align: center">0</td>
+        <td style="text-align: center">0</td>
+        <td style="text-align: center">0</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">0</td>
+        <td style="text-align: center">0</td>
+        <td style="text-align: center">1</td>
+        <td style="text-align: center">-<sup>R</sup>&frasl;<sub>4R</sub>&#8729;10= -2.5</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">0</td>
+        <td style="text-align: center">1</td>
+        <td style="text-align: center">0</td>
+        <td style="text-align: center">-<sup>R</sup>&frasl;<sub>2R</sub>&#8729;10= -5</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">0</td>
+        <td style="text-align: center">1</td>
+        <td style="text-align: center">1</td>
+        <td style="text-align: center">-(<sup>R</sup>&frasl;<sub>4R</sub>+<sup>R</sup>&frasl;<sub>2R</sub>)&#8729;10= -7.5</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">1</td>
+        <td style="text-align: center">0</td>
+        <td style="text-align: center">0</td>
+        <td style="text-align: center">-<sup>R</sup>&frasl;<sub>R</sub>&#8729;10= -10</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">1</td>
+        <td style="text-align: center">0</td>
+        <td style="text-align: center">1</td>
+        <td style="text-align: center">-(<sup>R</sup>&frasl;<sub>4R</sub>+<sup>R</sup>&frasl;<sub>R</sub>)&#8729;10= -12.5</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">1</td>
+        <td style="text-align: center">1</td>
+        <td style="text-align: center">0</td>
+        <td style="text-align: center">-(<sup>R</sup>&frasl;<sub>R</sub>+<sup>R</sup>&frasl;<sub>2R</sub>)&#8729;10= -15</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">1</td>
+        <td style="text-align: center">1</td>
+        <td style="text-align: center">1</td>
+        <td style="text-align: center">-(<sup>R</sup>&frasl;<sub>4R</sub>+<sup>R</sup>&frasl;<sub>R</sub>+<sup>R</sup>&frasl;<sub>2R</sub>)&#8729;10= -17.5</td>
+    </tr>
+    </tbody>
+</table>
 <h2>License</h2>
 GNU General Public License v3.0
 <br><br>
