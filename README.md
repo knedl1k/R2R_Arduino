@@ -14,7 +14,8 @@
 <h2>Circuit</h2>
 <img src="illustration/circuit.png">
 
-<p>The type of Arduino is not important, it only affects how many outputs are usable as outputs of the binary signal.</p>
+<p>Stripes on resistors have no meaning, but the coloring of the resistors itself seprates them both. <br>
+Yellow ones has some fixed value. The blue ones have two times bigger value than the yellow ones.</p>
 <h2>Used parts</h2>
 <table>
     <thead>
@@ -26,9 +27,14 @@
     </thead>
     <tbody>
     <tr>
-        <td style="text-align: center">resistor</td>
-        <td style="text-align: center">?</td>
+        <td style="text-align: center">resistor 1</td>
+        <td style="text-align: center">8</td>
         <td style="text-align: center">220 k&#8486;</td>
+    </tr>
+    <tr>
+        <td style="text-align: center">resistor 2</td>
+        <td style="text-align: center">8</td>
+        <td style="text-align: center">440 k&#8486;</td>
     </tr>
     <tr>
         <td style="text-align: center">operation amplifier</td>
@@ -50,6 +56,7 @@
     </tr>
     </tbody>
 </table>
+<p>The type of Arduino is not important, it only affects how many outputs are usable as outputs of the binary signal.</p>
 <h1>DACs in general</h1>
 <h2>Recognized parameters of DACs</h2>
 <ul>
