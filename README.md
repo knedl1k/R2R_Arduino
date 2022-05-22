@@ -22,24 +22,20 @@ Yellow ones has some fixed value. The blue ones have two times bigger value than
     <tr>
         <th style="text-align: center">name</th>
         <th style="text-align: center">pieces</th>
-        <th style="text-align: center">description</th>
     </tr>
     </thead>
     <tbody>
     <tr>
-        <td style="text-align: center">resistor 1</td>
+        <td style="text-align: center">resistor 220 k&#8486;</td>
         <td style="text-align: center">8</td>
-        <td style="text-align: center">220 k&#8486;</td>
     </tr>
     <tr>
-        <td style="text-align: center">resistor 2</td>
+        <td style="text-align: center">resistor 440 k&#8486;</td>
         <td style="text-align: center">8</td>
-        <td style="text-align: center">440 k&#8486;</td>
     </tr>
     <tr>
         <td style="text-align: center">operation amplifier</td>
         <td style="text-align: center">1</td>
-        <td style="text-align: center">no gain</td>
     </tr>
     <tr>
         <td style="text-align: center">Arduino</td>
@@ -47,8 +43,7 @@ Yellow ones has some fixed value. The blue ones have two times bigger value than
     </tr>
     <tr>
         <td style="text-align: center">wires</td>
-        <td style="text-align: center">?</td>
-        <td style="text-align: center">copper</td>
+        <td style="text-align: center">10</td>
     </tr>
     <tr>
         <td style="text-align: center">breadboard</td>
