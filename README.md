@@ -1,4 +1,3 @@
-<!--<?xml version="1.0" encoding="UTF-16"?>-->
 <h1>R2R Digital to Analog Converter using Arduino</h1>
 <p align="left">
     <a alt="License" href="https://github.com/knedl1k/R2R_Arduino/blob/main/LICENSE">
@@ -7,7 +6,8 @@
 </p>
 <i>Digital to Analog Converters (DACs) are used within transfers of binary signals to analog signals. The resolution of
     the DAC is determined by the number of possible output voltage values. These depend on the number of bits of the
-    input data word &mdash; binary signal. To calculate it, divide the output voltage range by (2n -1), where n is the number of bits of the
+    input data word &mdash; binary signal. To calculate it, divide the output voltage range by (2n -1), where n is the
+    number of bits of the
     input word. DACs are commonly used in digital power supplies, programmable generators or automation
     technology.</i>
 <br>
@@ -61,7 +61,8 @@ The type of Arduino is not important, it only affects how many outputs are usabl
     </li>
     <li><b>Conversion rate</b> defines the number of input words converted to analog value per unit time</li>
     <li><b>Resolution</b> tells how many values the output signal can be (if we have a 3-bit converter, then there can
-        be 2<sup>3</sup> different values at the output = this corresponds to the resolution <sup>100</sup>&frasl;<sub>8</sub>
+        be 2<sup>3</sup> different values at the output = this corresponds to the resolution
+        <sup>100</sup>&frasl;<sub>8</sub>
         = 12.5 %
     </li>
 </ul>
@@ -88,7 +89,10 @@ The type of Arduino is not important, it only affects how many outputs are usabl
     to introduce error into the conversion (when not switched they have infinite resistance and when switched they have
     very low resistance, ideally zero). Parallel DACs are quite expensive (because of the quality and values of the
     resistors, or the number of them), but they are fast and accurate.</p>
-<table>
+<h2>Example of calculation</h2>
+<h3>Circuit</h3>
+<img src="illustration/eg_calc_circ2.png">
+<table style="border: 1px solid black">
     <thead>
     <tr>
         <th colspan="3" style="text-align: center">BIN IN</th>
@@ -124,7 +128,9 @@ The type of Arduino is not important, it only affects how many outputs are usabl
         <td style="text-align: center">0</td>
         <td style="text-align: center">1</td>
         <td style="text-align: center">1</td>
-        <td style="text-align: center">-(<sup>R</sup>&frasl;<sub>4R</sub>+<sup>R</sup>&frasl;<sub>2R</sub>)&#8729;10= -7.5</td>
+        <td style="text-align: center">-(<sup>R</sup>&frasl;<sub>4R</sub>+<sup>R</sup>&frasl;<sub>2R</sub>)&#8729;10=
+            -7.5
+        </td>
     </tr>
     <tr>
         <td style="text-align: center">1</td>
@@ -136,19 +142,24 @@ The type of Arduino is not important, it only affects how many outputs are usabl
         <td style="text-align: center">1</td>
         <td style="text-align: center">0</td>
         <td style="text-align: center">1</td>
-        <td style="text-align: center">-(<sup>R</sup>&frasl;<sub>4R</sub>+<sup>R</sup>&frasl;<sub>R</sub>)&#8729;10= -12.5</td>
+        <td style="text-align: center">-(<sup>R</sup>&frasl;<sub>4R</sub>+<sup>R</sup>&frasl;<sub>R</sub>)&#8729;10=
+            -12.5
+        </td>
     </tr>
     <tr>
         <td style="text-align: center">1</td>
         <td style="text-align: center">1</td>
         <td style="text-align: center">0</td>
-        <td style="text-align: center">-(<sup>R</sup>&frasl;<sub>R</sub>+<sup>R</sup>&frasl;<sub>2R</sub>)&#8729;10= -15</td>
+        <td style="text-align: center">-(<sup>R</sup>&frasl;<sub>R</sub>+<sup>R</sup>&frasl;<sub>2R</sub>)&#8729;10= -15
+        </td>
     </tr>
     <tr>
         <td style="text-align: center">1</td>
         <td style="text-align: center">1</td>
         <td style="text-align: center">1</td>
-        <td style="text-align: center">-(<sup>R</sup>&frasl;<sub>4R</sub>+<sup>R</sup>&frasl;<sub>R</sub>+<sup>R</sup>&frasl;<sub>2R</sub>)&#8729;10= -17.5</td>
+        <td style="text-align: center">-(<sup>R</sup>&frasl;<sub>4R</sub>+<sup>R</sup>&frasl;<sub>R</sub>+<sup>R</sup>&frasl;<sub>2R</sub>)&#8729;10=
+            -17.5
+        </td>
     </tr>
     </tbody>
 </table>
