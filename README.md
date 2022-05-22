@@ -172,11 +172,12 @@ Connection of 3 bit parallel DAC.
     </tbody>
 </table>
 <p>
+    With this 3-bit converter we are able to express voltage levels (in binary form) from
+    0 to 7 as voltage from 0 V to -17.5 V. <br>
     If the positive values of output voltage are required, subsequently invert the signal
     using an inverting operational amplifier with amplification A<sub>u</sub>=1, or connect a source U<sub>ref</sub> of
-    opposite polarity. <br>
-    With this 3-bit converter we are able to express voltage levels from 0 V to -17.5 V as numbers (in binary form) from
-    0 to 7.
+    opposite polarity.
+    
 </p>
 <h2>License</h2>
 <p>GNU General Public License v3.0</p>
