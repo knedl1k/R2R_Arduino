@@ -14,12 +14,10 @@ void loop() {
     valSin = ((sin(i * DEG_TO_RAD) + 1) * 127); //creation of sinus
     byte lowBits = valSin << 1;
     byte highBits = valSin >> 9;
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < numOfOuts; i++) {
       digitalWrite(out[i], valSin & (1 << i));
     }
-    delay(2);
-    Serial.print(valSin);
-    Serial.print(",");
-    Serial.println(analogRead(A5));
+    delay(2); //change this freely, changes refreshing frequency of oscilloscope
+    Serial.println(analogRead(A5)); //oscilloscope node
   }
 }
