@@ -12,7 +12,7 @@
     technology.</i>
 <br>
 <h2>Circuit</h2>
-<img src="illustration/circuit.png">
+<img src="illustration/circuit2.png">
 
 <p>Stripes on resistors have no meaning, but the coloring of the resistors itself seprates them both. <br>
 Yellow ones has some fixed value. The blue ones have two times bigger value than the yellow ones.</p>
