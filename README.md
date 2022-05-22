@@ -14,8 +14,7 @@
 <h2>Wiring</h2>
 <img src="illustration/wiring.png">
 
-The type of Arduino is not important, it only affects how many outputs are usable as outputs of the binary signal.
-<br>
+<p>The type of Arduino is not important, it only affects how many outputs are usable as outputs of the binary signal.</p>
 <h2>Used parts</h2>
 <table>
     <thead>
@@ -51,9 +50,8 @@ The type of Arduino is not important, it only affects how many outputs are usabl
     </tr>
     </tbody>
 </table>
-<br>
 <h1>DACs in general</h1>
-<h2>Recognized parametrs of DACs</h2>
+<h2>Recognized parameters of DACs</h2>
 <ul>
     <li><b>Accuracy of the conversion</b> depends on the stability of the reference voltage, on the accuracy of the
         components (resistors and switches) and is also determined by the size (number of bits) of the converted word -
@@ -91,7 +89,17 @@ The type of Arduino is not important, it only affects how many outputs are usabl
     resistors, or the number of them), but they are fast and accurate.</p>
 <h2>Example of calculation</h2>
 <h3>Circuit</h3>
+Connection of 3 bit parallel DAC.
 <img src="illustration/eg_calc_circ2.png">
+<p>The following equation applies to this circuit: <br>
+    Amplification of inverting operational amplifier A<sub>u</sub>= -(<sup>R<sub>f</sub></sup> &frasl;
+    <sub>R<sub>par</sub></sub>) = (<sup>U<sub>0</sub></sup> &frasl; <sub>U<sub>ref</sub></sub>), R<sub>par</sub>
+    is parallel combination of resistors b<sub>0</sub> to b<sub>n</sub>, where <strong>n</strong> is number of bits. <br>
+    Hence the relationship for the output signal is: U<sub>0</sub>= -(<sup>R<sub>f</sub></sup> &frasl; <sub>R<sub>par</sub></sub>)
+    &#8729; U<sub>ref</sub> <br>
+    If R<sub>f</sub>=R & U<sub>ref</sub>=10 V, then:
+</p>
+<h3>Table of calculus</h3>
 <table style="border: 1px solid black">
     <thead>
     <tr>
@@ -116,13 +124,13 @@ The type of Arduino is not important, it only affects how many outputs are usabl
         <td style="text-align: center">0</td>
         <td style="text-align: center">0</td>
         <td style="text-align: center">1</td>
-        <td style="text-align: center">-<sup>R</sup>&frasl;<sub>4R</sub>&#8729;10= -2.5</td>
+        <td style="text-align: center">-(<sup>R</sup>&frasl;<sub>4R</sub>)&#8729;10= -2.5</td>
     </tr>
     <tr>
         <td style="text-align: center">0</td>
         <td style="text-align: center">1</td>
         <td style="text-align: center">0</td>
-        <td style="text-align: center">-<sup>R</sup>&frasl;<sub>2R</sub>&#8729;10= -5</td>
+        <td style="text-align: center">-(<sup>R</sup>&frasl;<sub>2R</sub>)&#8729;10= -5</td>
     </tr>
     <tr>
         <td style="text-align: center">0</td>
@@ -136,7 +144,7 @@ The type of Arduino is not important, it only affects how many outputs are usabl
         <td style="text-align: center">1</td>
         <td style="text-align: center">0</td>
         <td style="text-align: center">0</td>
-        <td style="text-align: center">-<sup>R</sup>&frasl;<sub>R</sub>&#8729;10= -10</td>
+        <td style="text-align: center">-(<sup>R</sup>&frasl;<sub>R</sub>)&#8729;10= -10</td>
     </tr>
     <tr>
         <td style="text-align: center">1</td>
@@ -163,7 +171,14 @@ The type of Arduino is not important, it only affects how many outputs are usabl
     </tr>
     </tbody>
 </table>
+<p>
+    If the positive values of output voltage are required, subsequently invert the signal
+    using an inverting operational amplifier with amplification A<sub>u</sub>=1, or connect a source U<sub>ref</sub> of
+    opposite polarity. <br>
+    With this 3-bit converter we are able to express voltage levels from 0 V to -17.5 V as numbers (in binary form) from
+    0 to 7.
+</p>
 <h2>License</h2>
-GNU General Public License v3.0
-<br><br>
-©2022 knedl1k
+<p>GNU General Public License v3.0</p>
+<br>
+<p>©2022 knedl1k</p>
