@@ -6,13 +6,13 @@
 </p>
 <i>Digital to Analog Converters (DACs) are used within transfers of binary signals to analog signals. The resolution of
     the DAC is determined by the number of possible output voltage values. These depend on the number of bits of the
-    input data word &mdash; binary signal. To calculate it, divide the output voltage range by (2n -1), where n is the
+    input data word &mdash; binary signal. To calculate it, divide the output voltage range by (2n -1), where <strong>n</strong> is the
     number of bits of the
     input word. DACs are commonly used in digital power supplies, programmable generators or automation
     technology.</i>
 <br>
-<h2>Wiring</h2>
-<img src="illustration/wiring.png">
+<h2>Circuit</h2>
+<img src="illustration/circuit.png">
 
 <p>The type of Arduino is not important, it only affects how many outputs are usable as outputs of the binary signal.</p>
 <h2>Used parts</h2>
